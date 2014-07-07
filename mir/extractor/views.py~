@@ -1,0 +1,29 @@
+from django.shortcuts import render
+from extract_features import *
+from csvtolibsvm import *
+from svm_prediction import *
+from django.http import *
+# Create your views here.
+
+from mir.extractor.models import UploadForm,Upload
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
+
+# Create your views here.
+def home(request):
+    if request.method=="POST":
+        img = UploadForm(request.POST, request.FILES)       
+        if img.is_valid():
+			img.save()
+			uploaded_file_name=request.FILES['pic']
+			feats=extract_feature(uploaded_file_name) 
+			csvtolibsvm('1')
+			predict()
+			
+			return HttpResponseRedirect(reverse('/imageupload'))
+			
+    else:
+        img=UploadForm()
+    images=Upload.objects.all()
+    return render(request,'home.html',{'form':img,'images':images})

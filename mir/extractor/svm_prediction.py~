@@ -1,0 +1,20 @@
+#!/usr/bin/python
+#SVM Predictions from pre-computed model
+from svmutil import *
+
+def predict():
+	model = svm_load_model('/home/harsha/MIR/mir/mir/extractor/models/fourinstru.model')
+	y, x = svm_read_problem('/home/harsha/MIR/mir/mir/extractor/testinput.libsvm')
+	print x
+	p_labels, p_acc, p_vals = svm_predict(y, x, model)
+	print 'Printing Results!!'
+	#print p_labels
+	#print p_acc
+	#print p_vals
+	
+
+
+if __name__ == '__main__':
+    predict()
+
+
