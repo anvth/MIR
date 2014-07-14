@@ -13,8 +13,9 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-sys.path.insert(0, os.path.join(BASE_DIR, "extractor/yaafelib"))
-sys.path.insert(1,'/home/harsha/yaafe-v0.64/build/python_packages')
+sys.path.insert(0, os.path.join(BASE_DIR, "mir/extractor/yaafelib"))
+sys.path.insert(1,'/home/anvith/Desktop/pd/Instrument/libsvm-3.17/python')
+sys.path.insert(2,'/home/anvith/django-workspace/mir/mir/extractor/libsvm-3.18')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -39,7 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'mir.extractor'
+    'mir.extractor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,5 +83,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'staticfiles'),
+)

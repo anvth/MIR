@@ -1,0 +1,44 @@
+Instrument
+
+Model
+
+Performer
+
+Date
+
+
+Location
+
+Technician
+
+
+Distance
+
+Microphone
+
+Interface
+
+Format
+
+ 
+
+Guitar
+
+Raimundo 118
+
+Brian Penkrot
+
+December 11, 2011
+
+Anechoic Chamber
+
+Shane Hoose and Zach Zubow
+
+5 feet
+
+Earthwork QTC40
+
+Metric Halo
+
+16-bit, 44 kHz, stereo and mono, 16-bit, 44kHz and 24-bit, 96 kHz stereo and mono files available in zip format at the bottom of this page
+

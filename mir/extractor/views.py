@@ -18,10 +18,11 @@ def home(request):
         if img.is_valid():
 			img.save()
 			uploaded_file_name=request.FILES['pic']
+			print uploaded_file_name
 			feats=extract_feature(uploaded_file_name) 
-			csvtolibsvm('1')
-			inst=predict()
-			return HttpResponse("The Recognition system thinks it is <b>"+inst+"</b> ")
+			#csvtolibsvm('1')
+			#inst=predict()
+			return HttpResponse("The Recognition system thinks it is <b>"+"</b> ")
 			'''output = "onLoad=\"javascript:alert('The language is ');"
 			print output+"\t valid form"
 			form = UploadForm()
